@@ -101,8 +101,8 @@ const deleteProduct = async (req, res) => {
   }
 };
 
-productRouter.get("/get", authorization, getProducts);
-productRouter.get("/get/:id", authorization, getProduct);
+productRouter.get("/get", getProducts);
+productRouter.get("/get/:id", getProduct);
 
 //(^_^)======================= Admin   Authorization       =========================
 
