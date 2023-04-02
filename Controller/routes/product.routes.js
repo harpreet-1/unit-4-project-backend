@@ -110,12 +110,8 @@ productRouter.use(adminAuthorization);
 
 //(^_^)=======================    Routes handling    =========================
 
-productRouter.route("/").get(getProducts).post(createProduct);
-productRouter
-  .route("/:id")
-  .get(getProduct)
-  .patch(updateProduct)
-  .delete(deleteProduct);
+productRouter.route("/").post(createProduct);
+productRouter.route("/:id").patch(updateProduct).delete(deleteProduct);
 
 //(^_^)=======================    Routes handling    =========================
 
